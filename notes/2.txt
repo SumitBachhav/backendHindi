@@ -1,0 +1,34 @@
+npm init
+node index.js
+npm install express
+npm run start
+npm i dotenv
+
+
+
+
+
+
+
+
+
+
+- npm init
+    give details or use (npm init -y) to use default values
+
+- node index.js
+    to run index file
+    we can edit script in package.json and make our custom command
+    "start": "node index.js"
+
+- npm install express
+
+- always start with / while writing various pages
+
+- req -> request
+- res -> response
+
+- npm i dotenv
+    install .env package
+    create a file .env
+    write variables

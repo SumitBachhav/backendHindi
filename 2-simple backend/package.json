@@ -1,0 +1,19 @@
+{
+  "name": "deploycheck",
+  "version": "1.0.0",
+  "description": "check",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "deploy",
+    "node"
+  ],
+  "author": "sumit bachhav",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

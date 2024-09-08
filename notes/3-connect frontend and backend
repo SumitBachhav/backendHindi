@@ -1,0 +1,36 @@
+BACKEND
+````````
+- create a simple backend
+
+- to use module js instead of commonjs(import vs require)
+    inside package.json
+    add - 
+    "type": "module"
+
+
+
+
+FRONTEND
+````````
+- vite is a bundler and tool chain
+
+- npm create vite@latest .
+    to create a simple frontend with vite
+    . is for creating all the files in current directory
+
+- npm install
+- npm run dev
+
+- npm i axios
+
+- CORS policy -> it does not allow cross origin requests (url or ports etc)
+    solutions-
+        1. In backend whitelist your url or ip or domain (by using cors package)
+        2. Use proxy
+            standardised way different for all bundlers (vite, create react app, etc)
+            for cra - ( "proxy": "http://localhost:3000" ) in package.json
+            for vite - ( "server": { "proxy": { "/api": "http://localhost:3000" } } ) in vite.config.js
+        3. etc
+
+- bad practices - in video from 43:00
+    should not put build file in backend folder and push backend to hosting

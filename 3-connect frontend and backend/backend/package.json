@@ -1,0 +1,19 @@
+{
+  "name": "frontend_backend",
+  "version": "1.0.0",
+  "description": "connecting backend and frontend",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "frontend",
+    "backend"
+  ],
+  "author": "sumit bachhav",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

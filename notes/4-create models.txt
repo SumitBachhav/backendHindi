@@ -1,0 +1,51 @@
+import mongoose from "mongoose";
+
+const userSchema = new mongoose.Schema({...})
+OR
+const userSchema = new mongoose.Schema({...}, {timestamps: true})
+
+export const User = mongoose.model("User", userSchema)
+                                     /
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                     /////////
+- mongoose changes User to users in database /
+
+- timestamps for created at, updated at
+
+- username: String
+- username: {...}
+
+
+- type: String, Boolean
+
+- default: false (for Boolean type)
+
+- required: true
+
+- unique: true
+
+- lowercase: true
+
+- min: [8, "password is too short"],
+
+- max: 12,
+
+- for relation
+    1. it should be special type
+    2. reference should be there
+
+    eg.
+    createdBy: {
+        type: mongoose.Schema.Types.ObjectId
+        ref: "User"
+    }
+
+    here User is what we exported from user model
+
+
+- subTodo: [
+    {
+        type: mongoose.Schema.Types.ObjectId
+        ref: "SubTodo"
+    }
+]

@@ -1,0 +1,27 @@
+- we can make another schema and use that in other schema
+
+    -eg ->
+
+        const orderItemSchema = new mongoose.Schema({
+            productId: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: "Product"
+            },
+            quantity: {
+                type: Number,
+                required: true
+            }
+        })
+
+        orderItems: {
+                type: [orderItemSchema]
+            },
+
+
+- we can restrict inputs to certain values by using enums
+
+    status: {
+        type: String,
+        enum: ["PENDING", "CANCELLED", "DELIVERED"],
+        default: "PENDING"
+    }

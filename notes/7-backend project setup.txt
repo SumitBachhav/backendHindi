@@ -1,0 +1,29 @@
+npm init
+
+- create .gitignore file with gitignore generator
+- create env file
+
+- set type to module js in package.json
+
+- create folder src
+    files-
+        app.js
+        constants.js
+        index.js
+    
+    folders-
+        controllers
+        db
+        middlewares
+        models
+        routes
+        utils
+    
+- install nodemon
+    use -D for installing as dev nodemon
+    npm i -D nodemon
+
+     add script in package.json
+        "dev": "nodemon src/index.js"
+
+- setup prettier as dev dependency with prettierrc and prettierignore

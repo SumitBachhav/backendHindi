@@ -1,27 +1,51 @@
-- we can make another schema and use that in other schema
+import mongoose from "mongoose";
 
-    -eg ->
+const userSchema = new mongoose.Schema({...})
+OR
+const userSchema = new mongoose.Schema({...}, {timestamps: true})
 
-        const orderItemSchema = new mongoose.Schema({
-            productId: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: "Product"
-            },
-            quantity: {
-                type: Number,
-                required: true
-            }
-        })
+export const User = mongoose.model("User", userSchema)
+                                     /
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                     /////////
+- mongoose changes User to users in database /
 
-        orderItems: {
-                type: [orderItemSchema]
-            },
+- timestamps for created at, updated at
+
+- username: String
+- username: {...}
 
 
-- we can restrict inputs to certain values by using enums
+- type: String, Boolean
 
-    status: {
-        type: String,
-        enum: ["PENDING", "CANCELLED", "DELIVERED"],
-        default: "PENDING"
+- default: false (for Boolean type)
+
+- required: true
+
+- unique: true
+
+- lowercase: true
+
+- min: [8, "password is too short"],
+
+- max: 12,
+
+- for relation
+    1. it should be special type
+    2. reference should be there
+
+    eg.
+    createdBy: {
+        type: mongoose.Schema.Types.ObjectId
+        ref: "User"
     }
+
+    here User is what we exported from user model
+
+
+- subTodo: [
+    {
+        type: mongoose.Schema.Types.ObjectId
+        ref: "SubTodo"
+    }
+]

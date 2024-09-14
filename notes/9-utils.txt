@@ -1,0 +1,30 @@
+since connectdb method is asynchronous, it returns promise
+    use .then and .catch to handle this in src/index.js
+
+write code for app.listen in connectdb in src/index.js
+
+npm i cokie-parser cors
+
+app.use -> is generally used for middlewares
+
+write middlewares in app.js
+    - cors middleware -> to only allow requests from specific origin, * means allow all
+    - express.json -> means we are accepting json, setting limit.
+    - express.urlencoded -> to let express understand data of url encoded format, extended let us give nested object (not necessarily needed), set limit
+    - express.static -> allows you to serve static files from a directory
+    - cookieParser -> to work on cookies
+
+(err, req, res, next)
+
+next is used for middlewares, its a flag, when a middleware completes its work next is used
+
+utils files are just helper/wraper files, repeated codes are written here
+
+nodejs has prebuilt error class, we are over-writing the class here
+
+status codes -
+    infomational responses (100 - 199)
+    Successful responses (200 - 299)
+    Redirection messages (300 - 399)
+    Client error responses (400 - 499)
+    Server error responses (500 - 599)

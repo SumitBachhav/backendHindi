@@ -1,0 +1,31 @@
+create cluster and database in mongodb atlass
+
+0.0.0.0/0 -> allows everyone (ip address) to connect
+
+save connection url in .env file
+
+remove slash at the end of url
+
+npm i mongoose express dotenv
+
+wrap your code in try catch block when connecting to database
+
+use async await when connecting to database
+
+iffy -> ;( async () => {} )()
+
+create index.js file in db folder
+    connect database here and export it
+
+in src/index.js import connect db function
+
+import .env in src/index.js with config
+    require('dotenv').config({path: './.env'})
+    OR
+    import dotenv from "dotenv"
+    dotenv.config({
+        path: './.env'
+    })
+
+import file correctly with full path and with .js as extention when problem occurs
+

@@ -1,0 +1,29 @@
+we should use index sparely
+
+npm i mongoose-aggregate-paginate-v2
+-> used to write aggregation querries
+
+add it as a plugin in videoSchema with mongoose hook
+
+npm i bcrypt
+-> it helps you to hash your password
+
+npm i jsonwebtoken
+-> make tokens
+
+using mongoose pre hook we can write operation to be performed before data saves
+in this hook context is important, so this keyword is needed
+it takes time, async keywordis needed
+
+a middleware will have next as a parameter
+
+jwt is bearer token, means anyone with token will have access to data
+
+write this in env file
+    ACCESS_TOKEN_SECRET = someLongRandomStringHaving_-AlphabetNumbersCapitalAndSmall
+    ACCESS_TOKEN_EXPIRY = 1d
+    REFRESH_TOKEN_SECRET = someLongRandomStringHaving_-AlphabetNumbersCapitalAndSmall
+    ACCESS_TOKEN_EXPIRY = 10d
+
+    access token will not be stored in database
+    refresh token will be stored in database

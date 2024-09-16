@@ -1,0 +1,12 @@
+npm i cloudinary
+npm i multer
+
+create cloudinary.js file in utils
+setup cloudinary config
+get code from website
+
+fs is file system, comes with nodejs, to work with files
+
+delete/unlink
+
+create multer.middleware.js in middleware

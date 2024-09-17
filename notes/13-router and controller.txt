@@ -1,0 +1,23 @@
+create user.controller.js
+    make a simple response code and wrap it in asyncHandler and export it
+
+create user.router.js
+    basic code - 
+        import {Router} from "express"
+        const router = Router()
+
+        router.route...
+
+        export default router
+
+in app.js
+    import routes
+    declare routes
+    use middleware get router
+
+generally routes should start with /api/v1/...
+
+for default export - we can use any name while importing 
+
+for normal export - importing with same name and inside {}
+
